@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dara_Store.Application.Interfaces.Contexts;
 using Dara_Store.Common.Roles;
+using Dara_Store.Domain.Entities.HomePages;
 using Dara_Store.Domain.Entities.Products;
 using Dara_Store.Domain.Entities.Users;
 using Microsoft.EntityFrameworkCore;
@@ -21,6 +22,10 @@ namespace Dara_Store.Persistence.Contexts
         public DbSet<Role> Roles { get; set; }
         public DbSet<UserInRole> UserInRoles { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductImages> ProductImages { get; set; }
+        public DbSet<ProductFeatures> ProductFeatures { get; set; }
+        public DbSet<Slider> Sliders { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -44,6 +49,10 @@ namespace Dara_Store.Persistence.Contexts
             modelBuilder.Entity<Role>().HasQueryFilter(p => !p.IsRemove);
             modelBuilder.Entity<UserInRole>().HasQueryFilter(p => !p.IsRemove);
             modelBuilder.Entity<Category>().HasQueryFilter(p => !p.IsRemove);
+            modelBuilder.Entity<Product>().HasQueryFilter(p => !p.IsRemove);
+            modelBuilder.Entity<ProductImages>().HasQueryFilter(p => !p.IsRemove);
+            modelBuilder.Entity<ProductFeatures>().HasQueryFilter(p => !p.IsRemove);
+            modelBuilder.Entity<Slider>().HasQueryFilter(p => !p.IsRemove);
         }
 
         private void SeedData(ModelBuilder modelBuilder)

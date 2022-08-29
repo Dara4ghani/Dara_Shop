@@ -1,4 +1,5 @@
-﻿using Dara_Store.Domain.Entities.Products;
+﻿using Dara_Store.Domain.Entities.HomePages;
+using Dara_Store.Domain.Entities.Products;
 using Dara_Store.Domain.Entities.Users;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -19,6 +20,7 @@ namespace Dara_Store.Application.Interfaces.Contexts
          DbSet<Product> Products { get; set; }
          DbSet<ProductImages> ProductImages { get; set; }
          DbSet<ProductFeatures> ProductFeatures { get; set; }
+        DbSet<Slider> Sliders { get; set; }
 
         int SaveChanges(bool acceptAllChangeOnSuccess);
         int SaveChanges();
