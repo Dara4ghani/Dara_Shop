@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Interfaces\Contexts\hqukmfw3.y55~" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Unipluss.Sign.Client" Version="1.0.2876" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Dara_Store.Common\Dara_Store.Common.csproj" />
+    <ProjectReference Include="..\Dara_Store.Domain\Dara_Store.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Services\Common\Commands\" />
+    <Folder Include="Services\Users\Command\UserLogin\" />
+  </ItemGroup>
+
+</Project>
