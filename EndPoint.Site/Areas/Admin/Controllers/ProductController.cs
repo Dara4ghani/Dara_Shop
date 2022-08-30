@@ -1,8 +1,7 @@
 ﻿using Dara_Store.Application.Interfaces.FacadPattern;
-using Dara_Store.Application.Services.Product.Commands.AddNewProduct;
+using Dara_Store.Application.Services.Products.Commands.AddNewProduct;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 

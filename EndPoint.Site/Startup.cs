@@ -22,6 +22,8 @@ using Dara_Store.Application.Services.Users.Command.UserStatusChange;
 using Dara_Store.Application.Services.Common.Queries.GetMenuItem;
 using Dara_Store.Application.Services.Common.Queries.GetCategoy;
 using Dara_Store.Application.Services.HomePages.AddNewSlider;
+using Dara_Store.Application.Services.Common.Queries.GetSlider;
+using Dara_Store.Application.Services.Product.FacadPattern;
 
 namespace EndPoint.Site
 {
@@ -47,13 +49,14 @@ namespace EndPoint.Site
             services.AddScoped<IEditUserService, EditUserService>();
 
             //FacadInject
-            services.AddScoped<IProductFacad, IProductFacad>();
+            services.AddScoped<IProductFacad, ProductFacad>();
 
 
             //---------------
-            services.AddScoped<IGetMenuItemService, IGetMenuItemService>();
-            services.AddScoped<IGetCategoryService, IGetCategoryService>();
-            services.AddScoped<IAddNewSliderService, IAddNewSliderService>();
+            services.AddScoped<IGetMenuItemService, GetMenuItemsService>();
+            services.AddScoped<IGetCategoryService, GetCategoryService>();
+            services.AddScoped<IAddNewSliderService, AddNewSliderService>();
+            services.AddScoped<IGetSliderService, GetSliderService>();
 
             string ConnectionString = @"data Source=.\sql2019;  uid=sa;  password=123456;  Initial Catalog=Dara_StoreDb;  Integrated Security=False;  Persist Security Info=True";
             services.AddDbContext<DataBaseContext>(option => option.UseSqlServer(ConnectionString));

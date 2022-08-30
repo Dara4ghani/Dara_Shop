@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace EndPoint.Site.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class SlidersController : Controller
     {
         private readonly IAddNewSliderService _addNewSliderService;

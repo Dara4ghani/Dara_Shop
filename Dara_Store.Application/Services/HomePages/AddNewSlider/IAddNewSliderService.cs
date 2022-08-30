@@ -48,7 +48,7 @@ namespace Dara_Store.Application.Services.HomePages.AddNewSlider
         {
             if (file != null)
             {
-                string folder = $@"images\HomePages\Slider";
+                string folder = $@"images\HomePages\Slider\";
                 var uploadsRootFolder = Path.Combine(_environment.WebRootPath, folder);
                 if (!Directory.Exists(uploadsRootFolder))
                 {
