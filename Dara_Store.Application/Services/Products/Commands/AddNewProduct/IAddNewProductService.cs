@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Unipluss.Sign.ExternalContract.Entities;
 
 namespace Dara_Store.Application.Services.Product.Commands.AddNewProduct
 {

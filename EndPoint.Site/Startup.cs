@@ -24,6 +24,8 @@ using Dara_Store.Application.Services.Common.Queries.GetCategoy;
 using Dara_Store.Application.Services.HomePages.AddNewSlider;
 using Dara_Store.Application.Services.Common.Queries.GetSlider;
 using Dara_Store.Application.Services.Product.FacadPattern;
+using Dara_Store.Application.Services.HomePages.AddHomePageImages;
+using Dara_Store.Application.Services.Common.Queries.GetHomePageImages;
 
 namespace EndPoint.Site
 {
@@ -57,6 +59,8 @@ namespace EndPoint.Site
             services.AddScoped<IGetCategoryService, GetCategoryService>();
             services.AddScoped<IAddNewSliderService, AddNewSliderService>();
             services.AddScoped<IGetSliderService, GetSliderService>();
+            services.AddScoped<IAddHomePageImagesService, AddHomePageImagesService>();
+            services.AddScoped<IGetHomePageImagesService, GetHomePageImagesService>();
 
             string ConnectionString = @"data Source=.\sql2019;  uid=sa;  password=123456;  Initial Catalog=Dara_StoreDb;  Integrated Security=False;  Persist Security Info=True";
             services.AddDbContext<DataBaseContext>(option => option.UseSqlServer(ConnectionString));

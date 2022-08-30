@@ -26,6 +26,7 @@ namespace Dara_Store.Persistence.Contexts
         public DbSet<ProductImages> ProductImages { get; set; }
         public DbSet<ProductFeatures> ProductFeatures { get; set; }
         public DbSet<Slider> Sliders { get; set; }
+        public DbSet<HomePageImages> HomePageImages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -53,6 +54,7 @@ namespace Dara_Store.Persistence.Contexts
             modelBuilder.Entity<ProductImages>().HasQueryFilter(p => !p.IsRemove);
             modelBuilder.Entity<ProductFeatures>().HasQueryFilter(p => !p.IsRemove);
             modelBuilder.Entity<Slider>().HasQueryFilter(p => !p.IsRemove);
+            modelBuilder.Entity<HomePageImages>().HasQueryFilter(p => !p.IsRemove);
         }
 
         private void SeedData(ModelBuilder modelBuilder)

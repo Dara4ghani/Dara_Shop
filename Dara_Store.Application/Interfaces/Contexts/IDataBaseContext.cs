@@ -20,7 +20,8 @@ namespace Dara_Store.Application.Interfaces.Contexts
          DbSet<Product> Products { get; set; }
          DbSet<ProductImages> ProductImages { get; set; }
          DbSet<ProductFeatures> ProductFeatures { get; set; }
-        DbSet<Slider> Sliders { get; set; }
+         DbSet<Slider> Sliders { get; set; }
+         DbSet<HomePageImages> HomePageImages { get; set; }
 
         int SaveChanges(bool acceptAllChangeOnSuccess);
         int SaveChanges();
