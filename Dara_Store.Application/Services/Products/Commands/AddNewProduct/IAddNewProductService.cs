@@ -35,7 +35,7 @@ namespace Dara_Store.Application.Services.Product.Commands.AddNewProduct
 
                 var category = _context.Categories.Find(request.CategoryId);
 
-                Product product = new Product()
+                Dara_Store.Domain.Entities.Products.Product product = new Dara_Store.Domain.Entities.Products.Product()
                 {
                     Brand = request.Brand,
                     Description = request.Description,

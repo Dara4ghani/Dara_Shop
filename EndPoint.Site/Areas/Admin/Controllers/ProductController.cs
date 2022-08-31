@@ -26,10 +26,7 @@ namespace EndPoint.Site.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult AddNewProduct()
-        {
-            ViewBag.Categories = new SelectList(_productFacad.GetAllCategoriesService.Execute().Data, "Id", "Name");
-        }
+        public IActionResult AddNewProduct() => ViewBag.Categories = new SelectList(_productFacad.GetAllCategoriesService.Execute().Data, "Id", "Name");
 
         [HttpPost]
         public IActionResult AddNewProduct(RequestAddNewProductDto request, List<AddNewProduct_Features> features)
