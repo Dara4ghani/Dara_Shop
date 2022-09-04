@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Dara_Store.Application.Interfaces.Contexts;
 using Dara_Store.Common.Roles;
+using Dara_Store.Domain.Entities.Carts;
 using Dara_Store.Domain.Entities.HomePages;
 using Dara_Store.Domain.Entities.Products;
 using Dara_Store.Domain.Entities.Users;
@@ -27,6 +28,7 @@ namespace Dara_Store.Persistence.Contexts
         public DbSet<ProductFeatures> ProductFeatures { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<HomePageImages> HomePageImages { get; set; }
+        public DbSet<Cart> Carts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -55,6 +57,7 @@ namespace Dara_Store.Persistence.Contexts
             modelBuilder.Entity<ProductFeatures>().HasQueryFilter(p => !p.IsRemove);
             modelBuilder.Entity<Slider>().HasQueryFilter(p => !p.IsRemove);
             modelBuilder.Entity<HomePageImages>().HasQueryFilter(p => !p.IsRemove);
+            modelBuilder.Entity<Cart>().HasQueryFilter(p => !p.IsRemove);
         }
 
         private void SeedData(ModelBuilder modelBuilder)

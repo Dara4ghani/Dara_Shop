@@ -1,4 +1,5 @@
-﻿using Dara_Store.Domain.Entities.HomePages;
+﻿using Dara_Store.Domain.Entities.Carts;
+using Dara_Store.Domain.Entities.HomePages;
 using Dara_Store.Domain.Entities.Products;
 using Dara_Store.Domain.Entities.Users;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,7 @@ namespace Dara_Store.Application.Interfaces.Contexts
          DbSet<ProductFeatures> ProductFeatures { get; set; }
          DbSet<Slider> Sliders { get; set; }
          DbSet<HomePageImages> HomePageImages { get; set; }
+         DbSet<Cart> Carts { get; set; }
 
         int SaveChanges(bool acceptAllChangeOnSuccess);
         int SaveChanges();
