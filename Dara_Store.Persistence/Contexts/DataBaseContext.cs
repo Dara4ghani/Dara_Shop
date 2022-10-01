@@ -29,6 +29,7 @@ namespace Dara_Store.Persistence.Contexts
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<HomePageImages> HomePageImages { get; set; }
         public DbSet<Cart> Carts { get; set; }
+        public DbSet<CartItem> CartItems { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
