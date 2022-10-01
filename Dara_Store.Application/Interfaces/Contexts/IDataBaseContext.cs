@@ -24,6 +24,7 @@ namespace Dara_Store.Application.Interfaces.Contexts
          DbSet<Slider> Sliders { get; set; }
          DbSet<HomePageImages> HomePageImages { get; set; }
          DbSet<Cart> Carts { get; set; }
+         DbSet<CartItem> CartItems { get; set; }
 
         int SaveChanges(bool acceptAllChangeOnSuccess);
         int SaveChanges();
